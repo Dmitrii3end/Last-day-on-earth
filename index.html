@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рейд базы</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/switchRadio.js"></script>
+    <script defer src="https://kit.fontawesome.com/3cae2e0b5a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>рейд базы</h1>
+        </header>
+
+        <main class="mainBase">
+            <div class="mainBase__base">
+
+                <div class="bench"></div>
+                <img class="mainBase__background" src="/image/base.png" alt="base">
+            </div>
+
+
+            <div class="ItemPanel unshow">
+                <h3 class="Item-info">
+                    Предметы в пикапе:
+                </h3>
+
+                <div class="all-item">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+
+            <div class="build-panel">
+                <div class="build-panel__section" id="build-type">
+                    <h3 class="build-panel__section-header">что строим:</h3>
+
+                    <div class="build-panel__wrap">
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="choose-build" id="wall" checked>
+                            <label class="build-type" for="wall">стена</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="choose-build" id="floor">
+                            <label class="build-type" for="floor">пол</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="choose-build" id="trap">
+                            <label class="build-type" for="trap">ловушка</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="choose-build" id="decor">
+                            <label class="build-type" for="decor">декор</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="choose-build" id="chest">
+                            <label class="build-type" for="chest">хранилище</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="choose-build" id="bench">
+                            <label class="build-type" for="bench">станок</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="build-panel__section" id="materials-type">
+                    <h3 class="build-panel__section-header">материал:</h3>
+
+                    <div class="build-panel__wrap">
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="material-type" id="straw" checked>
+                            <label for="straw">солома</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="material-type" id="board">
+                            <label for="board">доска</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="material-type" id="stone">
+                            <label for="stone">камень</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="material-type" id="iron">
+                            <label for="iron">железо</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="build-panel__section" id="wall-type">
+                    <h3 class="build-panel__section-header">тип стены:</h3>
+
+                    <div class="build-panel__wrap">
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="wall-type" id="width-door" checked>
+                            <label for="width-door">с дверью</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="wall-type" id="width-window">
+                            <label for="width-window">с окном</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="wall-type" id="solid">
+                            <label for="solid">сплошная</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="build-panel__section unshow" id="chest-type">
+                    <h3 class="build-panel__section-header">тип хранилища:</h3>
+
+                    <div class="build-panel__wrap">
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-type" id="box" checked>
+                            <label for="box">ящик</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-type" id="small-chest">
+                            <label for="small-chest">сундук</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-type" id="storage">
+                            <label for="storage">хранилище</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-type" id="rack">
+                            <label for="rack">стелаж</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-type" id="safe">
+                            <label for="safe">сейф</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="build-panel__section unshow" id="chest-color">
+                    <h3 class="build-panel__section-header">цвет хранилища:</h3>
+
+                    <div class="build-panel__wrap">
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="standard" checked>
+                            <label for="standard">стандартный</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="blue">
+                            <label for="blue">синий</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="red">
+                            <label for="red">красный</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="yellow">
+                            <label for="yellow">жёлтый</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="green">
+                            <label for="green">зелёный</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="black">
+                            <label for="black">чёрный</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="violet">
+                            <label for="violet">фиолетовый</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="white">
+                            <label for="white">белый</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="orange">
+                            <label for="orange">оранжевый</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="chest-color" id="pink">
+                            <label for="pink">розовый</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="build-panel__section unshow" id="trap-type">
+                    <h3 class="build-panel__section-header">тип ловушки:</h3>
+
+                    <div class="build-panel__wrap">
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="trap-type" id="stakes" checked>
+                            <label for="stakes">колья</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="trap-type" id="turret">
+                            <label for="turret">турель</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="trap-type" id="trip-wire">
+                            <label for="trip-wire">растяжка</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="build-panel__section unshow" id="trap-direction">
+                    <h3 class="build-panel__section-header">направление ловушки:</h3>
+
+                    <div class="build-panel__wrap">
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="trap-direction" id="up" checked>
+                            <label for="up">вверх</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="trap-direction" id="down">
+                            <label for="down">вниз</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="trap-direction" id="left">
+                            <label for="left">влево</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="trap-direction" id="right">
+                            <label for="right">вправо</label>
+                        </div>
+                        <div class="build-panel__rb-group">
+                            <input type="radio" name="trap-direction" id="broken">
+                            <label for="broken">сломано</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="build-panel__section unshow" id="bench-type">
+                    <h3 class="build-panel__section-header">станок:</h3>
+
+                    <div class="build-panel__wrap">
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="campfire" checked>
+                            <label for="campfire">костёр</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="sewing-table">
+                            <label for="sewing-table">швейный стол</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="garden-bed">
+                            <label for="garden-bed">грядка</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="workbench">
+                            <label for="workbench">верстак</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="carpenter's-table">
+                            <label for="carpenter's-table">плотницкий стол</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="processing-machine">
+                            <label for="processing-machine">станок для переработки</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="foundry">
+                            <label for="foundry">плавильня</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="medical-table">
+                            <label for="medical-table">стол медика</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="sump">
+                            <label for="sump">водосборник</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="improved-smelter">
+                            <label for="improved-smelter">улучшенная плавильня</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="stone-cutter">
+                            <label for="stone-cutter">камнерезка</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="weapon-stand">
+                            <label for="weapon-stand">оружейный стенд</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="meat-dryer">
+                            <label for="meat-dryer">сушилка для мяса</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="bench-type" id="leather-dryer">
+                            <label for="leather-dryer">сушилка для кожи</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="build-panel__section unshow" id="decor-type">
+                    <h3 class="build-panel__section-header">декор:</h3>
+
+                    <div class="build-panel__wrap">
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="decor-type" id="acid-bath" checked>
+                            <label for="acid-bath">кислотная ванна</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="decor-type" id="gunsmith's-table">
+                            <label for="gunsmith's-table">стол оружейника</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="decor-type" id="aviary">
+                            <label for="aviary">вольер</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="decor-type" id="ATV">
+                            <label for="ATV">АТВ</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="decor-type" id="boat">
+                            <label for="boat">катер</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="decor-type" id="shower">
+                            <label for="shower">душ</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="decor-type" id="radio">
+                            <label for="radio">радио</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="decor-type" id="chopper">
+                            <label for="chopper">чопер</label>
+                        </div>
+                        <div class="build-panel__rb-group min-width60percent">
+                            <input type="radio" name="decor-type" id="small-generator">
+                            <label for="small-generator">генератор</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="footer">
+
+        </footer>
+    </div>
+</body>
+
+</html>
